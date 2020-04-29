@@ -1,14 +1,16 @@
 # Geração de grafos bicíclicos extremais em relação ao Índice ABC_GG
 
-Este é um arquivo que contém o código e os arquivos de teste referente aos grafos bicíclicos que acompanham nosso artigo de nome: *On the Graovac-Ghorbani index for bicyclic graphs with no pendant vertices*. 
+Descrevemos logo abaixo, o código fonte bem como anexamos os arquivos de teste referente aos grafos bicíclicos descrito no nosso artigo de nome: *On the Graovac-Ghorbani index for bicyclic graphs with no pendant vertices*. 
 
-O objetivo deste arquivo é corroborar com a pesquisa e ratificar todos os testes computacionais realizados neste trabalho e demais trabalhos futuros de pesquisadores. 
+O nosso objetivo é corroborar com a pesquisa e ratificar todos os testes computacionais realizados neste trabalho e demais trabalhos futuros de pesquisadores. 
 
 ## Testes computacionais
 
-Realizamos experimentos computacionais em grafos bicíclicos de até 16 vértices para caracterizar os grafos com o índice mínimo e máximo de Graovac-Ghorbani. Esses grafos foram gerados usando o pacote Nauty-Traces e estão em código g6, no formato 'csv'. Os índices $ABC_ {GG}$ foram computados no software BlueJ. 
+Realizamos experimentos computacionais em grafos bicíclicos de até 16 vértices para caracterizar os grafos com o índice mínimo e máximo de Graovac-Ghorbani. Esses grafos foram gerados usando o pacote Nauty-Traces que gera os grafos em formato graph6. Os índices ABC_ {GG} foram computados no software BlueJ. 
 
-Para validar nossos testes, preparamos então o código fonte abaixo na linguagem python que pode ser testado no link www.cocalc.com gerando um novo projeto em branco e apenas copiando e colando o seguinte código:
+Para validar nossos testes, preparamos então o código fonte abaixo na linguagem python que pode ser testado no link www.cocalc.com. 
+
+Primeiramente, é necessário fazer o upload de todos os arquivos anexos na plataforma, que considera todos os grafos biciclicos para n=4,5,...,16. Após isto, abra um novo projeto em branco, e solicite um novo 'sagews'. Agora, basta apenas copiar e colar o seguinte código abaixo e realizar os testes, de acordo com o número *n* de vértices. 
 
 ```
 ficheiro = open(arquivo.csv) #exemplo: bic5.csv
