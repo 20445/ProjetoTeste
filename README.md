@@ -1,10 +1,21 @@
-# Geração de grafos bicíclicos extremais em relação ao Índice ABC_GG
+## Computing the Graovac Ghorbani index for bicyclic graphs
 
-Descrevemos logo abaixo, o código fonte bem como anexamos os arquivos de teste referente aos grafos bicíclicos descrito no nosso artigo de nome: *On the Graovac-Ghorbani index for bicyclic graphs with no pendant vertices*. 
+We describe all routines developed to obtain the results of the paper *On the Graovac-Ghorbani index for bicyclic graphs with no pendant vertices*. 
 
-O nosso objetivo é corroborar com a pesquisa e ratificar todos os testes computacionais realizados neste trabalho e demais trabalhos futuros de pesquisadores. 
+Our goal is to make all routines available and contribute to the academic commmunity in computing the Graovac Ghorbani index, which we will refer as ABC2. 
 
-## Testes computacionais
+All routines are written in SageMath (cocalc.com)
+
+Routines available are:
+
+ABC2(G): compute the ABC2 index for a graph G given as an input.
+minimizeABC2(n): return the graph with minimal ABC2 among all bicyclic graphs of order n.
+maximizeABC2(n): return the graph with maximal ABC2 among all bicyclic graphs of order n.
+
+## Description of the computational tests
+
+We ran minimizeABC2(n) for n ranging from 4 to 16. For each order.
+
 
 Realizamos experimentos computacionais em grafos bicíclicos de até 16 vértices para caracterizar os grafos com o índice mínimo e máximo de Graovac-Ghorbani. Esses grafos foram gerados usando o pacote Nauty-Traces que gera os grafos em formato graph6. Os índices ABC_ {GG} foram computados no software BlueJ. 
 
