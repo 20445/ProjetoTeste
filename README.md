@@ -6,6 +6,7 @@ Our goal is to make all routines available and contribute to the academic commmu
 
 All routines are Python routines written in SageMath (cocalc.com).
 
+Besides, a CSV file containing all bicyclic graphs of order from 4 to 16 is available.
 
 ## Graovac Ghorbani index routines for bicyclic graphs
 
