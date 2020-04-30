@@ -1,4 +1,4 @@
-## Brief Description
+## Description
 
 The computational routines available here were useful to obtain the results and conjectures presented at the paper *On the Graovac-Ghorbani index for bicyclic graphs with no pendant vertices*. 
 
