@@ -29,11 +29,11 @@ load('minimizeABC2.py')
 
 ListOfG6codes, fABC2 = minimizeABC2(4,6)
 
-print G6format
+print ListOfG6codes[0] ## print G6 code of the graph of order nmin
 
-print fABC2
+print fABC2 ## ABC2 index value for the graph of order nmin
 
-G = Graph(G6format[0]) ### convert G6 code of a graph to an object graph G in Sage. Note that 0 means the first graph of the list.
+G = Graph(ListOfG6codes[0]) ### convert G6 code of a graph to an object graph G in Sage. Note that 0 means the first graph of the list.
 
 G.show() ## displays the graph G of order nmin
 
