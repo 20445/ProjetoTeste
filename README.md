@@ -28,9 +28,7 @@ We ran minimizeABC2(nmin, nmax) (resp. maximizeABC2(nmin, nmax)) for each order 
 load('minimizeABC2.py')
 ListOfG6codes, fABC2 = minimizeABC2(4,6)
 print G6format
-        [︡'C^', 'DE{', 'E?zW']
 print fABC2
-        [2.8284271247461903, 4.620338909199534, 5.7619474868972835]
 G = Graph(G6format[0]) ### convert G6 code of a graph to an object graph G in Sage. Note that 0 means the first graph of the list.
 G.show() ## displays the graph G of order nmin
 
