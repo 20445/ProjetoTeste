@@ -1,55 +1,38 @@
-## Computing the Graovac Ghorbani index for bicyclic graphs
+## Brief Description
 
-We describe all routines developed to obtain the results of the paper *On the Graovac-Ghorbani index for bicyclic graphs with no pendant vertices*. 
+The computational routines available here were useful to obtain the results and conjectures presented at the paper *On the Graovac-Ghorbani index for bicyclic graphs with no pendant vertices*. 
 
 Our goal is to make all routines available and contribute to the academic commmunity in computing the Graovac Ghorbani index, which we will refer as ABC2. 
 
-All routines are written in SageMath (cocalc.com)
+All routines are Python routines written in SageMath (cocalc.com).
 
-Routines available are:
+
+## Graovac Ghorbani index routines for bicyclic graphs
+
+The routines available are:
 
 ABC2(G): compute the ABC2 index for a graph G given as an input.
-minimizeABC2(n): return the graph with minimal ABC2 among all bicyclic graphs of order n.
-maximizeABC2(n): return the graph with maximal ABC2 among all bicyclic graphs of order n.
 
-## Description of the computational tests
+minimizeABC2(nmin, nmax): return two lists: (i) list containing the G6 code of the graphs with minimal ABC2 among all bicyclic graphs of order from nmin to nmax; (ii) list containing the ABC2 index of the graphs with minimal ABC2 among all bicyclic graphs of order from nmin to nmax;
 
-We ran minimizeABC2(n) for n ranging from 4 to 16. For each order.
+maximizeABC2(nmin, nmax): return two lists: (i) list containing the G6 code of the graphs with maximal ABC2 among all bicyclic graphs of order from nmin to nmax; (ii) list containing the ABC2 index of the graphs with maximal ABC2 among all bicyclic graphs of order from nmin to nmax;
+
+## Computational experiments
+
+We ran minimizeABC2(nmin, nmax) (resp. maximizeABC2(nmin, nmax)) for each order n ranging from 4 to 16 aiming to find the graphs with minimum (resp. maximum) ABC2 index among all biciclyc graphs of a given order. Both routines call the ABC2(G) routine to compute the ABC2 index of each generated graph.
 
 
-Realizamos experimentos computacionais em grafos bicíclicos de até 16 vértices para caracterizar os grafos com o índice mínimo e máximo de Graovac-Ghorbani. Esses grafos foram gerados usando o pacote Nauty-Traces que gera os grafos em formato graph6. Os índices ABC_ {GG} foram computados no software BlueJ. 
+## Example 1: Obtaining the graphs with n = 4,5,6 with minimal ABC2 index
 
-Para validar nossos testes, preparamos então o código fonte abaixo na linguagem python que pode ser testado no link www.cocalc.com. 
+load('minimizeABC2.py')
+ListOfG6codes, fABC2 = minimizeABC2(4,6)
+print G6format
+        [︡'C^', 'DE{', 'E?zW']
+print fABC2
+        [2.8284271247461903, 4.620338909199534, 5.7619474868972835]
+G = Graph(G6format[0]) ### convert G6 code of a graph to an object graph G in Sage. Note that 0 means the first graph of the list.
+G.show() ## displays the graph G of order nmin
 
-Primeiramente, é necessário fazer o upload de todos os arquivos anexos na plataforma, que considera todos os grafos biciclicos para n=4,5,...,16. Após isto, abra um novo projeto em branco, e solicite um novo 'sagews'. Agora, basta apenas copiar e colar o seguinte código abaixo e realizar os testes, de acordo com o número *n* de vértices. 
-
-```
-ficheiro = open(arquivo.csv) #exemplo: bic5.csv
-reader = ficheiro.readlines()
-n=5 #number of vertices of graph
-for i in reader:
-    G=Graph(i.strip())
-    graus = G.degree_sequence()
-    graus.sort(reverse=True)
-    Dist = G.distance_matrix()
-    abc2=0
-    di=0
-    dj=0
-    for i in range(n):
-        for j in range(n):
-            if (Dist[i][j]==1):
-                di=0
-                dj=0
-                for k in range(n):
-                    if (Dist[i][k] > Dist[j][k]):
-                        di=di+1
-                    if (Dist[i][k] < Dist[j][k]):
-                        dj=dj+1
-                abc2= abc2 + sqrt((di+dj-2)/(di*dj))
-    abc2=(abc2/2)
-    G.show()
-    print 'abc2 = =', float(abc2)
-```
 
 
 
