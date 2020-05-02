@@ -22,6 +22,8 @@ maximizeABC2(nmin, nmax): return two lists: (i) list containing the G6 code of t
 
 We ran minimizeABC2(nmin, nmax) (resp. maximizeABC2(nmin, nmax)) for each order n ranging from 4 to 16 aiming to find the graphs with minimum (resp. maximum) ABC2 index among all biciclyc graphs of a given order. Both routines call the ABC2(G) routine to compute the ABC2 index of each generated graph.
 
+The file ABC2_experiments.ipynb is available and consists of an example of executing our algorithms.
+
 
 ## Example 1: Obtaining the graphs of orders n = 4,5,6 with minimal ABC2 index
 
